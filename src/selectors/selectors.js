@@ -14,6 +14,6 @@ export const selectBlogs = (blogs, {text, sortBy}) => {
         if(sortBy === 'date')
             return a.createdAt < b.createdAt ? 1 : -1
         else
-            return Object.keys(a.reads).length < Object.keys(b.reads) ? -1 : 1
+            return Object.keys(a.reads).length < Object.keys(b.reads) ? 1 : -1
     })
 }
