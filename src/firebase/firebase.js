@@ -1,15 +1,13 @@
 import * as firebase from 'firebase'
 
-
 const firebaseConfig = {
-    apiKey: process.env.FIREBASE_API_KEY,
-    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-    databaseURL: process.env.FIREBASE_DATABASE_URL,
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.FIREBASE_MESSEGING_SENDER_ID,
-    appId: process.env.FIREBASE_APP_ID,
-    measurementId: process.env.FIREBASE_MEASUEMENT_ID
+    apiKey: "AIzaSyAMEYEEbegp21HuzLA0tCRN0oaRTsJ9kPs",
+    authDomain: "blog-on-cb71d.firebaseapp.com",
+    databaseURL: "https://blog-on-cb71d.firebaseio.com",
+    projectId: "blog-on-cb71d",
+    storageBucket: "blog-on-cb71d.appspot.com",
+    messagingSenderId: "109176410549",
+    appId: "1:109176410549:web:e3771297db34ebb2db89fc"
 }
 
 firebase.initializeApp(firebaseConfig)

@@ -4,13 +4,25 @@
     padding: $s-size;
     font-size: $font-size-large;
     font-weight: 300;
-}
+    width: 60vw;
 
+    &:focus{
+        outline: none;
+        border: 3px solid #caaccd;
+    }
+}
 .select {
     @extend .text-input;
+    width: auto;
 }
 
 .textarea {
     @extend .text-input;
-    height: 10rem;
+    height: 40rem;
+    width: 70vw;
+}
+
+.message {
+    @extend .text-input;
+    height: 20rem;
 }

@@ -1,14 +1,12 @@
 import React from 'react'
-import ExpensesList from './ExpensesList'
-import ExpenseListFilters from './ExpenseListFilters'
-import ExpenseSummary from './ExpenseSummary'
+import BlogList from '../components/BlogList'
+import BlogsListFilters from './BlogsListFilters'
 
-const ExpenseDashboardPage = () => (
-    <div>   
-        <ExpenseSummary />
-        <ExpenseListFilters />
-        <ExpensesList />
+const Dashboard = () => (
+    <div>
+        <BlogsListFilters />
+        <BlogList />
     </div>
 )
 
-export default ExpenseDashboardPage
+export default Dashboard

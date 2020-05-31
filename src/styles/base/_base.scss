@@ -22,5 +22,6 @@ button:disabled{
 }
 
 .is-active{
-    font-weight: bold;
+    font-weight: bolder;
+    color: darken($color: $off-white, $amount: 20%);
 }

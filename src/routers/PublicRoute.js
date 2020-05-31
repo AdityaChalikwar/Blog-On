@@ -1,6 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import Header from '../components/Header'
 import { Route, Redirect } from 'react-router-dom'
 
 export const PublicRoute = ({isAuthenticated, component: Component, ...rest}) => (
@@ -10,7 +9,7 @@ export const PublicRoute = ({isAuthenticated, component: Component, ...rest}) =>
                     <Component {...props}/>
                 </div>
             ) : (
-                <Redirect to='/dashboard'/>
+                <Redirect to='/home'/>
             )
         )
     }/>

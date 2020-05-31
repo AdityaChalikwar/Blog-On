@@ -1,5 +1,5 @@
 .list-header {
-    background: $off-white;
+    background: lighten($color: maroon, $amount: 60%);
     border: 1px solid darken($color: $off-white, $amount: 10%);
     display: flex;
     justify-content: space-between;
@@ -19,13 +19,14 @@
     display: flex;
     flex-direction: column;
     border: 1px solid darken($color: $off-white, $amount: 10%);
-    border-top: none;
+    border-radius: 5px;
     color: $dark-grey;
     padding: $s-size;
     text-decoration: none;
     transition: background .3 ease;
+    margin-bottom: $s-size;
     &:hover {
-        background: $off-white;
+        background: lighten($color: maroon, $amount: 65%);
     }
 
     @media (min-width: $desktop-breakpoint) {
@@ -41,16 +42,29 @@
     word-break: break-all;
 }
 
+.list-item__body {
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+    white-space: pre-line;
+    text-overflow: ellipsis;
+    width: 90%;
+}
+
 .list-item__subtitle {
     color: $grey;
     font-size: $font-size-small;
 }
 
-.list-item__data {
+.list-item__reads {
     margin: $s-size 0 0 0;
 
     @media (min-width: $desktop-breakpoint){
         margin: 0;
         padding-left: $s-size;
     }
+}
+
+.list-item__data {
+    margin-right: $xl-size;
 }

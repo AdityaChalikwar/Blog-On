@@ -7,11 +7,13 @@ import './styles/styles.scss'
 import 'normalize.css/normalize.css'
 import 'react-dates/lib/css/_datepicker.css'
 import {firebase} from './firebase/firebase'
-import {startSetExpenses} from './actions/expenses'
 import { login, logout } from './actions/auth'
 import LoadingPage from './components/LoadingPage'
+import { startSetBlogs } from './actions/blogs'
+import { initStateWithPrevTab } from 'redux-state-sync'
 
 const store = ConfigureStore()
+initStateWithPrevTab(store);
 
 const jsx = (
     <Provider store={store}>
@@ -32,10 +34,10 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'))
 firebase.auth().onAuthStateChanged((user) => {
     if(user){
         store.dispatch(login(user.uid))
-        store.dispatch(startSetExpenses()).then(() => {
+        store.dispatch(startSetBlogs()).then(() => {
             renderApp()
             if(history.location.pathname === '/')
-                history.push('/dashboard')
+                history.push('/home')
         })
     }else{
         store.dispatch(logout())

@@ -1,19 +1,40 @@
 .header {
-    background: $dark-blue;
+    background: maroon;
+    height: 100vh;
+    width: 16vw;
+    position: fixed;
+
+    @media (min-width: $desktop-breakpoint) {
+        width: 15vw;
+    }
 }
 
 .header__title {
     color: white;
     text-decoration: none;
-    h1 {
-        margin: 0;
-    }
-
+    margin-top: $m-size;
+    padding: $s-size;
 }
 
 .header__content {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: $s-size 0;
+
+    h1{
+        font-size: 1.17em;
+        color: white;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+        h1{
+            font-size: 2em;
+        }
+    }
+}
+
+.line {
+    width: 10vw;
 }

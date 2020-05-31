@@ -6,7 +6,7 @@ import { Route, Redirect } from 'react-router-dom'
 export const PrivateRoute = ({isAuthenticated, component: Component, ...rest}) => (
     <Route {...rest} component={(props) => (
             isAuthenticated ? (
-                <div>
+                <div className="content-container">
                     <Header />
                     <Component {...props}/>
                 </div>

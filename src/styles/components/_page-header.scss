@@ -1,7 +1,14 @@
 .page-header {
-    background: $off-white;
+    background: lighten($color: maroon, $amount: 60%);
     padding: $l-size 0;
     margin-bottom: $l-size;
+    margin-left: 17vw;
+    width: 81vw;
+
+    @media(min-width: $desktop-breakpoint) {
+        width: 82vw;
+        margin-left: 16vw;
+    }
 }
 
 .page-header__content{
@@ -15,9 +22,11 @@
 
 .page-header__title {
     margin: 0;
+    font-size: 1.5em;
     font-weight: 300;
-    span {
-        font-weight: 700;
+
+    @media(min-width: $desktop-breakpoint) {
+        font-size: 2em;
     }
 }
 
@@ -26,7 +35,12 @@
     text-align: center;
 }
 
-.no-expense-message {
+.no-blogs-message {
     @extend .filter-message;
     color: $grey;
+    font-size: x-large;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

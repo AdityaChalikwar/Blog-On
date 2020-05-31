@@ -1,0 +1,21 @@
+.read-container__title {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin-left: $xl-size;
+    align-items: baseline;
+
+    h1{
+        color: maroon;
+    }
+}
+
+.read-container__data {
+    margin: 0 $xl-size 0 $xl-size;
+    width: 80%;
+    border: 1px solid darken($color: $off-white, $amount: 10%);
+    padding: 0 $s-size;
+    p {
+        white-space: pre-line;
+    }
+}
