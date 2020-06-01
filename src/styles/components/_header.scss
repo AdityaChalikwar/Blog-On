@@ -2,11 +2,12 @@
     background: maroon;
     width: 100vw;
     height: 8vh;
-    position: fixed;
+    position: absolute;
 
     @media (min-width: $desktop-breakpoint) {
         height: 100vh;
         width: 15vw;
+        position: fixed;
     }
 }
 
