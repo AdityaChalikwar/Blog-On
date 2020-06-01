@@ -16,11 +16,14 @@
     border: none;
     font-size: $font-size-large;
     float: right;
-    margin-top: $m-size;
-}
 
-.link:hover {
-    text-decoration: underline;
+    &:hover{
+        text-decoration: underline;
+    }
+
+    @media(max-width: $desktop-breakpoint){
+        font-size: x-small;
+    }
 }
 
 .newButton {

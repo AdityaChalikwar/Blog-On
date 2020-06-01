@@ -1,10 +1,11 @@
 .header {
     background: maroon;
-    height: 100vh;
-    width: 16vw;
+    width: 100vw;
+    height: 8vh;
     position: fixed;
 
     @media (min-width: $desktop-breakpoint) {
+        height: 100vh;
         width: 15vw;
     }
 }
@@ -12,29 +13,46 @@
 .header__title {
     color: white;
     text-decoration: none;
-    margin-top: $m-size;
     padding: $s-size;
+    font-size: x-small;
+
+    @media (min-width: $desktop-breakpoint) {
+        font-size: $font-size-large;
+    }
 }
 
 .header__content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: $s-size 0;
 
     h1{
-        font-size: 1.17em;
+        font-size: x-small;
         color: white;
+        font-family: 'comic sans MS';
+        font-style: oblique;
     }
 
     @media (min-width: $desktop-breakpoint) {
+        flex-direction: column;
         h1{
+            display: block;
             font-size: 2em;
         }
     }
 }
 
 .line {
-    width: 10vw;
+    display: none;
+    @media (min-width: $desktop-breakpoint) {
+        display: block;
+        width: 10vw;
+    }
+}
+
+.title {
+    color: white;
+    text-align: center;
 }

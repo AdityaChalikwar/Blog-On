@@ -1,7 +1,6 @@
 import React from 'react'
 import { firebase } from '../firebase/firebase'
 import moment from 'moment'
-import uuid from 'uuid'
 
 export default class Blog extends React.Component{
     constructor(props){

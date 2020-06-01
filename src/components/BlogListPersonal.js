@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { selectMyBlogs } from '../selectors/selectors'
  
 const BlogList = (props) => (
-    <div className="container">
+    <div className="personal-container">
         {
             props.blogs.length === 0 ? ( 
             <p className="no-blogs-message">No Blogs</p>

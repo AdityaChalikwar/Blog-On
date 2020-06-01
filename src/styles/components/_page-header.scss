@@ -1,9 +1,8 @@
 .page-header {
     background: lighten($color: maroon, $amount: 60%);
     padding: $l-size 0;
-    margin-bottom: $l-size;
-    margin-left: 20vw;
-    width: 78vw;
+    margin: 10vh $s-size $l-size $s-size;
+    width: 90vw;
 
     @media(min-width: $desktop-breakpoint) {
         width: 82vw;
@@ -22,7 +21,7 @@
 
 .page-header__title {
     margin: 0;
-    font-size: 1.5em;
+    font-size: small;
     font-weight: 300;
 
     @media(min-width: $desktop-breakpoint) {
