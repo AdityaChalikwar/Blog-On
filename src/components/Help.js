@@ -66,7 +66,9 @@ class HelpPage extends React.Component{
                                 isOpen={this.state.sent}
                                 contentLabel='sent'
                                 closeTimeoutMS={300}>
-                                <p className="modal_body">Feedback Sent</p>
+                                <p className="modal_body">
+                                    Thank you for the Feedback. We will get back to you as soon as possible.
+                                </p>
                                 <div className="button-container">
                                     <button className="button" onClick={this.closeModal}>OK</button> 
                                 </div>
