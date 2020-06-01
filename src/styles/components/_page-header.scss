@@ -2,8 +2,8 @@
     background: lighten($color: maroon, $amount: 60%);
     padding: $l-size 0;
     margin-bottom: $l-size;
-    margin-left: 17vw;
-    width: 81vw;
+    margin-left: 20vw;
+    width: 78vw;
 
     @media(min-width: $desktop-breakpoint) {
         width: 82vw;

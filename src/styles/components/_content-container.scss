@@ -1,11 +1,15 @@
 .content-container {
     display: flex;
     justify-content: space-between;
+
+    @media(min-width: $desktop-breakpoint) {
+        flex-direction: row;
+    }
 }
 
 .container {
-    margin-left: 17vw;
-    width: 81vw;
+    margin-left: 20vw;
+    width: 78vw;
 
     @media(min-width: $desktop-breakpoint) {
         width: 82vw;

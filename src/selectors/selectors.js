@@ -12,8 +12,9 @@ export const selectBlogs = (blogs, {text, sortBy}) => {
         return textMatch
     }).sort((a, b) => {
         if(sortBy === 'date')
-            return a.createdAt < b.createdAt ? 1 : -1
-        else
-            return Object.keys(a.reads).length < Object.keys(b.reads) ? 1 : -1
+            return b.createdAt - a.createdAt
+        else{
+            return Object.keys(b.reads).length - Object.keys(a.reads).length
+        }
     })
 }

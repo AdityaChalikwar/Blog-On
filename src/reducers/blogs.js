@@ -16,10 +16,14 @@ export const blogsReducer = (state = blogsDefaultState, action) => {
         case 'SET_BLOGS':
             return action.blogs
         case 'SET_READS':
-            return state.map((blog) => 
-                blog.id === action.id ? 
-                blog.reads[uuid()] = action.uid : 
-                blog
+            return state.map((blog) => {
+                    const id = uuid()
+                    if(blog.id === action.id){
+                        (blog.reads)[uuid()] = action.uid
+                        return blog
+                    }else 
+                        return blog
+                }
             )
         default:
             return state

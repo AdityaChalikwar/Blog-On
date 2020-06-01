@@ -6,6 +6,9 @@ import { startSetReads } from '../actions/blogs'
 import { firebase } from '../firebase/firebase'
 
 class BlogListItem extends React.Component{
+    constructor(props){
+        super(props)
+    }
     addReads = () => {
         if(Object.values(this.props.reads).indexOf(firebase.auth().currentUser.uid) <= -1)
             this.props.startSetReads(this.props.id, firebase.auth().currentUser.uid)
